@@ -1,0 +1,49 @@
+﻿<div class="well span4">
+    <div>
+        <h3>
+            <i class="icon-globe"></i>&nbsp;Where</h3>
+        <div class="input-append">
+            <input type="text" id="txtlocation" name="location" value="<%= location %>" class="input-xlarge" />
+        </div>
+        <h3>
+            <i class="icon-music"></i>&nbsp;What</h3>
+        <div class="input-append">
+            <input type="text" id="txtsearchcriteria" name="event" value="<%= searchcriteria %>"
+                class="input-medium" />
+            <select id="ddldistance" class="input-mini">
+                <option value="0.5">1/2</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3.5" selected>3.5</option>
+                <option value="5">5</option>
+                <option value="8">8</option>
+                <option value="10">10</option>
+                <option value="15">15</option>
+                <option value="20">20</option>
+                <option value="35">30</option>
+                <option value="50">50</option>
+            </select>&nbsp;<strong>Mi</strong>
+        </div>
+        <h3>
+            <i class="icon-time"></i>&nbsp;When</h3>
+        <input type="text" id="txtfromdate" name="from" value="<%= fromdate %>" class="input-small" />
+        <input type="text" id="txttodate" name="to" value="<%= todate %>" class="input-small" />
+        <div class="list-item" style="padding: 0; margin-bottom: 0;">
+            <div style="float: left;">
+                <div class="eventful-badge eventful-small">
+                    <img src="http://api.eventful.com/images/powered/eventful_58x20.gif" alt="Local Events, Concerts, Tickets">
+                    <p>
+                        <a href="http://eventful.com/">
+                                Events by Eventful
+                        </a>
+                    </p>
+                </div>
+            </div>
+            <div style="float: right; padding:6px 4px 0 0">
+                <a id="submit-search" href="#" class="btn btn-large btn-primary span2"><i class="icon-search icon-white">
+                </i>&nbsp;Search</a>
+            </div>
+            <div style="clear: both" />
+        </div>
+</div>
+</div> 

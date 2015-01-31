@@ -1,0 +1,65 @@
+﻿<div id="thumbnail" class="list-item">
+    <div class="list-item-header">
+    <%= (start_datetime!=undefined)? start_datetime.toLocaleDateString():'Check for date' %><br />
+        <strong><%=  (start_time!='12:00 AM') ? start_time :'confirm' %></strong>
+    </div>
+    
+    
+    <div class="list-item-body">
+        <div style="height:208px;" >
+        <address>
+        <div style="width:170px;">
+            <div style="float: left; ">
+                <img id="orderimgid" src="<%= order_img %>" alt="" style="cursor:pointer" />
+            </div>
+            <div style="float: right; width:130px;">
+        <strong>
+    <%= (title!=undefined) ? title : 'Check for title' %></strong>
+            </div>
+        </div>
+            <div style="clear: both;" />
+            <br />
+            <strong>
+            <%= (venue_name!=undefined) ? venue_name : 'Check for venue' %>
+            </strong>
+            <br />
+            <%= (venue_address!=undefined) ? venue_address : 'Check for address' %>
+        </address>
+            <div id="list-item-picture">
+            </div>
+        </div>
+    </div>
+    <div class="list-item-footer">
+        <a id="modaldescription" href="<%= venue_url  %>" target="_blank" class="btn btn-small btn-info"><i class="icon-info-sign icon-white"></i>&nbsp;More Info</a>
+    </div>
+    <div id='description' class="modal hide fade" style="display: none">
+        <div class="modal-header">
+            <button class="close" data-dismiss="modal">
+                x</button>
+            <%= (start_datetime!=undefined)?start_datetime.toLocaleDateString():'Check for date' %>&nbsp;<strong><%=  (start_time!='12:00 AM') ? start_time :'confirm' %></strong>
+        </div>
+        <div class="modal-body">
+            <h4>
+                <%= title %></h4>
+            <br />
+            <address>
+                <a href="<%= venue_url %> ">
+                    <%= venue_name %>
+                </a>
+                <br />
+                <%=venue_address %>
+            </address>
+            <h5>
+                <%= (description!=undefined) ?  'Description:': ''  %>
+                </h5>
+            
+            <p>
+                <%= description %>
+            </p>
+        </div>
+        <div class="modal-footer">
+            <a href="#" class="btn" data-dismiss="modal">Close</a> <a href="#" class="btn btn-primary">
+                Save event</a>
+        </div>
+    </div>
+</div>
